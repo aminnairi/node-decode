@@ -1,0 +1,27 @@
+name: Test
+
+on:
+  pull_request:
+    branches:
+      - latest
+      - next
+
+  push:
+    branches:
+      - latest
+      - next
+
+jobs:
+  test:
+    name: Check that the specifications are met
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Dependencies
+        run: make install
+
+      - name: Test
+        run: make test
