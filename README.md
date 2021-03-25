@@ -131,6 +131,57 @@ true
 false
 ```
 
+## Example
+
+```console
+$ touch index.mjs
+```
+
+```javascript
+import fetch from "node-fetch";
+import {decode} from "./sources/decode.mjs";
+
+const usersSchema = [{
+  id: "number",
+  name: "string",
+  username: "string",
+  email: "string",
+  address: {
+    street: "string",
+    suite: "string",
+    city: "string",
+    zipcode: "string",
+    geo: {
+      lat: "string",
+      lng: "string"
+    }
+  },
+  phone: "string",
+  website: "string",
+  company: {
+    name: "string",
+    catchPhrase: "string",
+    bs: "string"
+  }
+}];
+
+fetch("https://jsonplaceholder.typicode.com/users/").then(response => {
+  return response.json();
+}).then(users => {
+  if (!decode(usersSchema, users)) {
+    throw new Error("Bad response from the server (has the API changed?)");
+  }
+  console.log("Do something with the users.");
+}).catch(({message}) => {
+  console.error(message);
+});
+```
+
+```console
+$ node index.mjs
+Do something with the users.
+```
+
 ## Changelog
 
 See [`CHANGELOG.md`](./CHANGELOG.md).
