@@ -2,7 +2,7 @@
 
 Check that your data meet your expectations.
 
-[![Test](https://github.com/aminnairi/node-decode/actions/workflows/test.yaml/badge.svg?branch=latest)](https://github.com/aminnairi/node-decode/actions/workflows/test.yaml)
+[![Test](https://github.com/aminnairi/node-decode/actions/workflows/test.yaml/badge.svg?branch=latest)](https://github.com/aminnairi/node-decode/actions/workflows/test.yaml) [![Publish](https://github.com/aminnairi/node-decode/actions/workflows/publish.yaml/badge.svg)](https://github.com/aminnairi/node-decode/actions/workflows/publish.yaml)
 
 ## Requirements
 
