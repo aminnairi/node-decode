@@ -8,17 +8,12 @@ Check that your data meet your expectations.
 
 - Node
 
-## Installation
-
-```console
-$ npm install @aminnairi/decode
-```
-
 ## Usage
 
 ### Simple
 
 ```console
+$ npm install @aminnairi/decode
 $ touch index.mjs
 ```
 
@@ -42,6 +37,7 @@ false
 ### Array
 
 ```console
+$ npm install @aminnairi/decode
 $ touch index.mjs
 ```
 
@@ -65,6 +61,7 @@ false
 ### Object
 
 ```console
+$ npm install @aminnairi/decode
 $ touch index.mjs
 ```
 
@@ -88,6 +85,7 @@ false
 ### Object (loose)
 
 ```console
+$ npm install @aminnairi/decode
 $ touch index.mjs
 ```
 
@@ -111,6 +109,7 @@ false
 ### Array of objects
 
 ```console
+$ npm install @aminnairi/decode
 $ touch index.mjs
 ```
 
@@ -134,12 +133,13 @@ false
 ## Example
 
 ```console
+$ npm install node-fetch @aminnairi/decode
 $ touch index.mjs
 ```
 
 ```javascript
 import fetch from "node-fetch";
-import {decode} from "./sources/decode.mjs";
+import {decode} from "@aminnairi/decode";
 
 const usersSchema = [{
   id: "number",
